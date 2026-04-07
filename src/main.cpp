@@ -1,6 +1,9 @@
-#include <iostream>
+//Copyright 2026 Alexunderkot
+
 #include "../include/Automata.h"
-int main(){
+#include <iostream>
+#include <string>
+int main() {
     Automata automata = Automata();
     automata.on();
     automata.getState();

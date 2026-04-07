@@ -7,7 +7,7 @@
 #include <map>
 
 std::ostream &operator<<(std::ostream &os, state s) {
-    switch (s){
+    switch (s) {
     case state::off:
         return os << "off";
         break;
@@ -66,7 +66,7 @@ void Automata::getMenu() {
         return;
     std::cout << "Printing menu...\n";
     for (size_t i = 0; i < this->_menu.size(); i++)
-        std::cout << this->_menu[i] << '\t' 
+        std::cout << this->_menu[i] << '\t'
         << this->_products[_menu[i]] << std::endl;
 }
 state Automata::getState() {
@@ -79,14 +79,14 @@ std::string Automata::choice(int choice) {
         return "";
     std::cout << "Operating your choice...\n";
     this->_state = state::check;
-    return (choice <= _menu.size() && choice > 0) ? 
+    return (choice <= _menu.size() && choice > 0) ?
     this->_menu[choice - 1] : "incorrect choice";
 }
 void Automata::check(std::string product) {
     if (this->_state != state::check)
         return;
     std::cout << "Trying to charge you for the product...\n";
-    if (_cash >= _products[product]){
+    if (_cash >= _products[product]) {
         this->_state = state::cook;
         return;
     }

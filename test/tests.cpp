@@ -2,9 +2,9 @@
 
 #include <gtest/gtest.h>
 #include "../include/Automata.h"
+#include <string>
 
-TEST(task1, test1_part1)
-{
+TEST(task1, test1_part1) {
     Automata automata;
     EXPECT_EQ(automata.getCash(), 0);
     automata.on();
@@ -22,8 +22,7 @@ TEST(task1, test1_part1)
               static_cast<int>(state::accept));
 }
 
-TEST(task1, test1_part2)
-{
+TEST(task1, test1_part2) {
     Automata automata;
     automata.on();
     automata.coin(10);
@@ -35,8 +34,7 @@ TEST(task1, test1_part2)
               static_cast<int>(state::wait));
 }
 
-TEST(task1, test1_part3)
-{
+TEST(task1, test1_part3) {
     Automata automata;
     automata.on();
     automata.coin(10);
@@ -52,8 +50,7 @@ TEST(task1, test1_part3)
               static_cast<int>(state::cook));
 }
 
-TEST(task1, test1_part4)
-{
+TEST(task1, test1_part4) {
     Automata automata;
     automata.on();
     automata.coin(100);
@@ -65,8 +62,7 @@ TEST(task1, test1_part4)
     EXPECT_EQ(automata.getState(), state::wait);
 }
 
-TEST(task1, test1_part5)
-{
+TEST(task1, test1_part5) {
     Automata automata;
     automata.on();
     automata.coin(100);
@@ -78,8 +74,7 @@ TEST(task1, test1_part5)
     EXPECT_EQ(automata.choice(2), "");
 }
 
-TEST(task1, test1_part6)
-{
+TEST(task1, test1_part6) {
     Automata automata;
     automata.on();
     automata.coin(99);
@@ -88,8 +83,7 @@ TEST(task1, test1_part6)
     EXPECT_EQ(automata.getCash(), 99);
 }
 
-TEST(task1, test1_part7)
-{
+TEST(task1, test1_part7) {
     Automata automata;
     automata.on();
     automata.coin(100);
@@ -98,8 +92,7 @@ TEST(task1, test1_part7)
     EXPECT_EQ(automata.choice(6), "incorrect choice");
 }
 
-TEST(task1, test1_part10)
-{
+TEST(task1, test1_part10) {
     Automata automata;
     automata.on();
     automata.coin(10);
@@ -110,8 +103,7 @@ TEST(task1, test1_part10)
               static_cast<int>(state::accept));
 }
 
-TEST(task1, test1_part11)
-{
+TEST(task1, test1_part11) {
     Automata automata;
     automata.on();
     automata.coin(550);
@@ -162,8 +154,7 @@ TEST(task1, test1_part11)
     EXPECT_EQ(automata.getState(), state::wait);
 }
 
-TEST(task1, test1_part12)
-{
+TEST(task1, test1_part12) {
     Automata automata;
     automata.on();
     automata.coin(100);
