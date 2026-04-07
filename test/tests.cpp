@@ -1,8 +1,8 @@
 // Copyright 2022 GHA Test Team
 
 #include <gtest/gtest.h>
-#include "../include/Automata.h"
 #include <string>
+#include "../include/Automata.h"
 
 TEST(task1, test1_part1) {
     Automata automata;
@@ -92,6 +92,13 @@ TEST(task1, test1_part7) {
     EXPECT_EQ(automata.choice(6), "incorrect choice");
 }
 
+TEST(task1, test1_part8) {
+    Automata automata;
+    automata.on();
+    automata.coin(100);
+    EXPECT_EQ(automata.choice(6), "incorrect choice");
+}
+
 TEST(task1, test1_part10) {
     Automata automata;
     automata.on();
@@ -164,6 +171,6 @@ TEST(task1, test1_part12) {
     EXPECT_EQ(automata.getCash(), 100);
     automata.coin(100);
     automata.choice(2);
-    EXPECT_EQ(automata.getState(), state::wait);
+    EXPECT_EQ(automata.getState(), state::check);
     EXPECT_EQ(automata.getCash(), 200);
 }

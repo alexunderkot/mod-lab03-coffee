@@ -1,8 +1,8 @@
 //Copyright 2026 Alexunderkot
 
-#include "../include/Automata.h"
 #include <iostream>
 #include <string>
+#include "../include/Automata.h"
 int main() {
     Automata automata = Automata();
     automata.on();

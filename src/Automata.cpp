@@ -1,10 +1,10 @@
 //Copyright 2026 Alexunderkot
 
-#include "../include/Automata.h"
 #include <iostream>
 #include <string>
 #include <vector>
 #include <map>
+#include "../include/Automata.h"
 
 std::ostream &operator<<(std::ostream &os, state s) {
     switch (s) {
