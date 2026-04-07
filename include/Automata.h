@@ -1,13 +1,12 @@
-#ifndef AUTOMATA_H
-#define AUTOMATA_H
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <map>
 
-enum class state
-{
+enum class state{
     off = 1,
     wait,
     accept,
@@ -17,8 +16,7 @@ enum class state
 
 std::ostream& operator<<(std::ostream& os, state s);
 
-class Automata
-{
+class Automata{
 private:
     int _cash;
     std::vector<std::string> _menu;
@@ -40,4 +38,4 @@ public:
     int getCash();
 };
 
-#endif // AUTOMATA_H
+#endif  // INCLUDE_AUTOMATA_H_

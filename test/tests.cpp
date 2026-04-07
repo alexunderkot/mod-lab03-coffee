@@ -7,14 +7,18 @@ TEST(task1, test1_part1) {
     Automata automata;
     EXPECT_EQ(automata.getCash(), 0);
     automata.on();
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::wait));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::wait));
     automata.off();
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::off)); 
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::off)); 
     automata.on();
     automata.coin(10);
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::accept));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::accept));
     automata.getMenu();
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::accept));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::accept));
 }
 
 TEST(task1, test1_part2) {
@@ -22,9 +26,11 @@ TEST(task1, test1_part2) {
     automata.on();
     automata.coin(10);
     std::string drink = automata.choice(2);
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::check));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::check));
     automata.check(drink);
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::wait));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::wait));
 }
 
 TEST(task1, test1_part3) {
@@ -35,9 +41,11 @@ TEST(task1, test1_part3) {
     automata.check(drink);
     automata.coin(90);
     EXPECT_EQ(automata.getCash(), 100);
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::accept));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::accept));
     automata.check(drink);
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::cook));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::cook));
 }
 
 TEST(task1, test1_part4) {
@@ -88,7 +96,8 @@ TEST(task1, test1_part10) {
     automata.coin(20);
     automata.coin(30);
     EXPECT_EQ(automata.getCash(), 60);
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::accept));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::accept));
 }
 
 TEST(task1, test1_part11) {
@@ -98,9 +107,11 @@ TEST(task1, test1_part11) {
     
     std::string drink1 = automata.choice(1);
     EXPECT_EQ(drink1, "Tea");
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::check));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::check));
     automata.check(drink1);
-    EXPECT_EQ(static_cast<int>(automata.getState()), static_cast<int>(state::cook));
+    EXPECT_EQ(static_cast<int>(automata.getState()), 
+    static_cast<int>(state::cook));
     automata.cook(drink1);
     automata.finish();
     EXPECT_EQ(automata.getCash(), 450);  
