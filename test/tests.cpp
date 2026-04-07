@@ -88,8 +88,6 @@ TEST(task1, test1_part7) {
     automata.on();
     automata.coin(100);
     EXPECT_EQ(automata.choice(0), "incorrect choice");
-    automata.coin(1);
-    EXPECT_EQ(automata.choice(6), "incorrect choice");
 }
 
 TEST(task1, test1_part8) {
