@@ -1,3 +1,5 @@
+//Copyright 2026 Alexunderkot
+
 #ifndef INCLUDE_AUTOMATA_H_
 #define INCLUDE_AUTOMATA_H_
 
@@ -17,13 +19,13 @@ enum class state{
 std::ostream& operator<<(std::ostream& os, state s);
 
 class Automata{
-private:
+ private:
     int _cash;
     std::vector<std::string> _menu;
     std::map<std::string, int> _products;
     state _state;
 
-public:
+ public:
     Automata();
     void on();
     void off();
